@@ -1,0 +1,22 @@
+<mat-toolbar fxLayout="row" color="primary">
+    <a fxFlex href="/">
+
+        <h2 class="main-title"> <img class="logo" src="../../../assets/logo2.jfif"> Servicios MotoAuto</h2>
+    </a>
+    <ng-container *ngFor="let item of menuItems">
+        <a mat-button href="{{item.url}}" fxHide.xs>
+            <i class="{{item.icon}}"></i> {{item.label}}
+        </a>
+    </ng-container>
+    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #dropMenu="matMenu">
+        <ng-container *ngFor="let item of menuItems">
+            <a mat-menu-item href="{{item.url}}">
+                <i class="{{item.icon}}"></i> {{item.label}}
+            </a>
+            <mat-divider></mat-divider>
+        </ng-container>
+    </mat-menu>
+</mat-toolbar>

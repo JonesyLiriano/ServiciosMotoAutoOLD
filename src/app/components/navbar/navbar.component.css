@@ -1,0 +1,33 @@
+.logo {
+    display: inline;
+    vertical-align: bottom;
+}
+
+img {
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-title {
+    font-size: 25px;
+    line-height: 44px;
+    font-weight: 500;
+    color: white;
+}
+
+mat-toolbar {
+    background-color: transparent;
+    -webkit-transition: 700ms;
+    -ms-transition: 700ms;
+    transition: 700ms;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+    color: white;
+}
+
+.margin-left-15 {
+    margin-left: 30px;
+}

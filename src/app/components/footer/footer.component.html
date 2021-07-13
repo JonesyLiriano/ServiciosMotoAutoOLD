@@ -1,0 +1,90 @@
+<footer>
+    <!-- Footer main -->
+    <section class="ft-main">
+        <div class="ft-main-item">
+            <h2 class="ft-title">Recursos</h2>
+            <ul>
+                <li><a href="#">Documentación</a></li>
+                <li><a href="#brands">Marcas</a></li>
+                <li><a href="/about-us">Nosotros</a></li>
+                <li><a href="#contactUs">Contáctanos</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#">Registrarse</a></li>
+            </ul>
+        </div>
+        <div class="ft-main-item">
+            <h2 class="ft-title">Contactos</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-home me-3"></i> Olof Palme no.3, Los Prados. Santo Domingo
+                </li>
+                <li>
+                    <i class="fas fa-envelope me-3"></i> ventas@motoautord.com
+                </li>
+                <li>
+                    <i class="fas fa-phone me-3"></i> 809-338-7422
+                </li>
+                <li>
+                    <i class="fas fa-phone me-3"></i> 809-616-1116
+                </li>
+            </ul>
+        </div>
+        <div class="ft-main-item">
+            <h2 class="ft-title">Mantente actualizado</h2>
+            <p>Suscríbase a nuestro boletín para recibir nuestras últimas ofertas.</p>
+            <form [formGroup]="subscriberForm" #formDirective="ngForm" (ngSubmit)="onClickSubmit(formDirective)">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Ingresar Email</mat-label>
+                    <input formControlName="email" matInput type="email" placeholder="Ingresar Email">
+                    <button mat-button *ngIf="email?.value" matSuffix mat-icon-button aria-label="Clear" (click)="email?.setValue('')">
+                    <mat-icon>close</mat-icon>
+                    </button>
+                    <mat-error *ngIf="(email?.dirty || email?.touched) && email?.invalid && !!email?.errors?.required">
+                        El campo email es requerido.
+                    </mat-error>
+                    <mat-error *ngIf="(email?.dirty || email?.touched) && email?.invalid && !!email?.errors?.email">
+                        Tiene que ser un email valido.
+                    </mat-error>
+                </mat-form-field>
+                <h2 class="divider ft-title">-o-</h2>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Ingresar Whatsapp</mat-label>
+                    <input formControlName="phone" matInput type="tel" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Ingresar Whatsapp">
+                    <button mat-button *ngIf="phone?.value" matSuffix mat-icon-button aria-label="Clear" (click)="phone?.setValue('')">
+          <mat-icon>close</mat-icon>
+        </button>
+                    <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.required">
+                        El campo telefono es requerido.
+                    </mat-error>
+                    <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.invalidNumber">
+                        Tiene que ser un numero de telefono valido.
+                    </mat-error>
+                    <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.minLength">
+                        Tiene que ser un numero de telefono valido.
+                    </mat-error>
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button color="accent" class="full-width" type="submit" [disabled]="!subscriberForm.valid">Subscribirse</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer social -->
+    <section class="ft-social">
+        <ul class="ft-social-list">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
+    <!-- Footer legal -->
+    <section class="ft-legal">
+        <ul class="ft-legal-list">
+            <li><a href="#">Términos &amp; Condiciones</a></li>
+            <li><a href="#">Políticas de privacidad</a></li>
+            <li>&copy; 2021 Servicios MotoAuto S.R.L</li>
+        </ul>
+    </section>
+</footer>

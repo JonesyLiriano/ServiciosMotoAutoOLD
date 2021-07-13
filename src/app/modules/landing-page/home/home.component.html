@@ -1,0 +1,124 @@
+<div class="content">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section1">
+        <div fxFlex="40%" fxFlex.lt-md="30%" fxFlex.lt-sm="40%">
+            <h1 class="main-title">¡La que mas le beneficia!</h1>
+            <a href="#contactUs" class="button-title" mat-raised-button color="accent">Contáctanos</a>
+            <a class="button-subtitle" mat-button><i class="fas fa-shopping-cart"></i> Ver tienda</a>
+        </div>
+        <img src="../../../../assets/bicixmoto.png" class="image-tittle" fxFlex="50%" fxFlex.lt-md="50%" fxFlex.lt-sm="45%" />
+        <div class="scroll-downs">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" class="section2" fxLayoutAlign="space-evenly center" id="brands">
+        <div fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div fxLayout="row" class="brands-info">
+                <div fxLayout="column" fxLayoutAlign="space-evenly center">
+                    <div class="white-color section2-text">
+                        <h1 class="main-title">Explora nuestras marcas</h1>
+                    </div>
+                    <mat-button-toggle-group #categoryToggleButton="matButtonToggleGroup" value="Motocicleta">
+                        <mat-button-toggle value="Motocicleta"><i class="fas fa-motorcycle"></i> Motocicleta</mat-button-toggle>
+                        <mat-button-toggle value="Bicicleta"><i class="fas fa-bicycle"></i> Bicicleta</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </div>
+            <mat-spinner *ngIf="showBrandSpinner"></mat-spinner>
+            <div class="card-container">
+                <drag-scroll>
+                    <div *ngFor="let brand of brandsList" drag-scroll-item class="card-content">
+                        <mat-card class="mat-elevation-z4 brand-card" *ngIf="categoryToggleButton.value == brand.category || brand.category == ''">
+                            <mat-card-header>
+                                <mat-card-title>
+                                    <img class="card-logo" src="{{brand.logo}}" />
+                                </mat-card-title>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="full-width" mat-raised-button color="accent" (click)="navegateBrandInfo(brand)">Explorar Marca</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </drag-scroll>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section3" id="contactUs">
+        <div>
+            <h1 class="main-title section3-title">Contáctanos</h1>
+            <h1 class="main-subtitle">¿No eres cliente aún? Favor de llenar este formulario y nos pondremos en contacto con usted</h1>
+            <mat-card class="mat-elevation-z4">
+                <mat-spinner *ngIf="showContactSpinner"></mat-spinner>
+                <form [formGroup]="contactForm" #formDirective="ngForm" (ngSubmit)="onClickSubmit(formDirective)">
+                    <div>
+                        <div>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Nombre</mat-label>
+                                <input formControlName="name" matInput type="text" placeholder="Nombre">
+                                <button mat-button *ngIf="name?.value" matSuffix mat-icon-button aria-label="Clear" (click)="name?.setValue('')">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                                <mat-error *ngIf="(name?.dirty || name?.touched) && name?.invalid && !!name?.errors?.required">
+                                    El campo nombre es requerido.
+                                </mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Email</mat-label>
+                                <input formControlName="email" matInput type="email" placeholder="Email">
+                                <button mat-button *ngIf="email?.value" matSuffix mat-icon-button aria-label="Clear" (click)="email?.setValue('')">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                                <mat-error *ngIf="(email?.dirty || email?.touched) && email?.invalid && !!email?.errors?.required">
+                                    El campo email es requerido.
+                                </mat-error>
+                                <mat-error *ngIf="(email?.dirty || email?.touched) && email?.invalid && !!email?.errors?.email">
+                                    Tiene que ser un email valido.
+                                </mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Telefono</mat-label>
+                                <input formControlName="phone" matInput type="tel" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Telefono">
+                                <button mat-button *ngIf="phone?.value" matSuffix mat-icon-button aria-label="Clear" (click)="phone?.setValue('')">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                                <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.required">
+                                    El campo telefono es requerido.
+                                </mat-error>
+                                <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.invalidNumber">
+                                    Tiene que ser un numero de telefono valido.
+                                </mat-error>
+                                <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.minLength">
+                                    Tiene que ser un numero de telefono valido.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Mensaje</mat-label>
+                                <textarea formControlName="message" matInput placeholder="Escribe un mensaje"></textarea>
+                                <button mat-button *ngIf="message?.value" matSuffix mat-icon-button aria-label="Clear" (click)="message?.setValue('')">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                                <mat-error *ngIf="(message?.dirty || message?.touched) && message?.invalid && !!message?.errors?.required">
+                                    El campo mensaje es requerido.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <button mat-raised-button color="accent" type="submit" [disabled]="!contactForm.valid">Enviar Mensaje</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section4">
+        <div class="full-width">
+            <h1 class="main-title section3-title">Ubicación</h1>
+            <google-map height="500px" width="100%" [center]="centerMap" [zoom]="18" [options]="optionsMap">
+                <map-marker [position]="marker.position" [label]="marker.label" [title]="marker.title" [options]="marker.options">
+                </map-marker>
+            </google-map>
+        </div>
+    </div>

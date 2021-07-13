@@ -1,0 +1,318 @@
+.scroll-downs {
+    position: absolute;
+    padding-bottom: 10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 34px;
+    height: 55px;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+.section2 {
+    background-image: url("../../../../assets/wave1.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 20vh;
+}
+
+.section1 {
+    background-color: #2E5EAA;
+    color: white;
+    height: 100vh;
+}
+
+.main-title {
+    color: white;
+}
+
+.card-logo {
+    width: 150px;
+}
+
+.mat-button-toggle-group {
+    margin-bottom: 20px;
+}
+
+mat-card:hover {
+    box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
+    transform: translate3D(0, -1px, 0) scale(1.03);
+    transition: all .4s ease;
+}
+
+.brand-card {
+    width: 200px;
+    margin: 15px;
+}
+
+mat-card {
+    transition: all .5s ease;
+}
+
+.card-container {
+    height: 300px;
+    width: 70vw;
+}
+
+.card-content {
+    overflow-y: hidden !important;
+}
+
+.mat-card-actions button.mat-raised-button:hover {
+    box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
+    transform: translate3D(0, -1px, 0) scale(1.03);
+    transition: all .4s ease;
+    background-color: green;
+}
+
+.mat-card-actions button.mat-raised-button {
+    transition: all .5s ease;
+}
+
+a {
+    transition: all .5s ease;
+}
+
+a:hover {
+    box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
+    transform: translate3D(0, -1px, 0) scale(1.03);
+    transition: all .4s ease;
+    background-color: green;
+}
+
+mat-card-actions {
+    text-align: center;
+}
+
+mat-card-header {
+    justify-content: center;
+}
+
+mat-button-toggle {
+    background-color: #2E5EAA;
+    color: white;
+    width: 100%;
+}
+
+mat-button-toggle-group {
+    background-color: #2E5EAA;
+    color: white;
+    width: 300px;
+}
+
+.mat-button-toggle-checked {
+    background-color: white;
+    color: #2E5EAA;
+}
+
+.section3-title {
+    color: black !important;
+}
+
+.section4 {
+    text-align: center;
+    padding: 20px;
+}
+
+textarea {
+    height: 200px;
+}
+
+.section3 {
+    text-align: center;
+    padding: 20px;
+    background-image: url("../../../../assets/wave2.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+drag-scroll {
+    text-align: center;
+}
+
+.brands-info {
+    padding: 20px;
+}
+
+@media screen and (max-width: 599px) {
+    .section1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .section2-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .main-title {
+        font-size: 30px;
+        line-height: 44px;
+        font-weight: 500;
+    }
+    .button-title {
+        font-size: 14px;
+        letter-spacing: .21px;
+        line-height: 13px;
+        padding: 15px 42px;
+        display: block;
+    }
+    .button-subtitle {
+        line-height: 13px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: .57px;
+        padding: 15px 30px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .sub-title {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .image-tittle {
+        width: 100%;
+        height: 80%;
+        padding: 0px;
+        margin-bottom: 40px;
+        margin-top: -40px;
+    }
+    .mat-button-toggle-group {
+        font-size: 16px;
+    }
+    .scroll-downs {
+        right: 20px;
+        left: auto;
+    }
+    .card-container {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 959px) and (min-width: 600px) {
+    .main-title {
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: 500;
+    }
+    .section1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .section2-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .button-title {
+        font-size: 16px;
+        letter-spacing: .21px;
+        line-height: 13px;
+        padding: 15px 42px;
+        margin: 0 30px 0 0;
+    }
+    .button-subtitle {
+        line-height: 13px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: .57px;
+        padding: 15px 30px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .sub-title {
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .image-tittle {
+        width: 80%;
+        height: 80%;
+        padding: 0px;
+        margin-bottom: 40px;
+        margin-top: -90px
+    }
+    .mat-button-toggle-group {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .main-title {
+        font-size: 52px;
+        line-height: 62px;
+        font-weight: 500;
+    }
+    .button-title {
+        font-size: 20px;
+        letter-spacing: .21px;
+        line-height: 16px;
+        padding: 20px 52px;
+    }
+    .button-subtitle {
+        line-height: 20px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: .57px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+    .sub-title {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .image-tittle {
+        width: 100%;
+        height: 80%;
+        padding: 0px;
+    }
+    .mat-button-toggle-group {
+        font-size: 20px;
+    }
+}
