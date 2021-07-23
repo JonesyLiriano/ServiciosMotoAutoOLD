@@ -59,19 +59,15 @@ export class HomeComponent implements OnInit {
   }
   images = [
     './../../../assets/carrousel/moto/1.jpg',
+     './../../../assets/carrousel/bici/1.jpg',     
      './../../../assets/carrousel/moto/2.jpg',
-     './../../../assets/carrousel/bici/1.jpg',
      './../../../assets/carrousel/bici/2.jpg',
-     './../../../assets/carrousel/moto/3.jpg',
-     './../../../assets/carrousel/moto/4.jpg',
+     './../../../assets/carrousel/moto/3.jpg',     
      './../../../assets/carrousel/bici/3.jpg',
+     './../../../assets/carrousel/moto/4.jpg',
      './../../../assets/carrousel/bici/4.jpg',
      './../../../assets/carrousel/moto/5.jpg',
-    './../../../assets/carrousel/moto/6.jpg',
     './../../../assets/carrousel/bici/5.jpg',
-    './../../../assets/carrousel/bici/6.jpg',
-    './../../../assets/carrousel/moto/7.jpg',
-    './../../../assets/carrousel/bici/7.jpg',
   ];
   constructor(private fb: FormBuilder, private toastr: ToastrService,
     private router: Router) {      
