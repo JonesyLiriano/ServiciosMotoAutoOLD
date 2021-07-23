@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,27 +12,38 @@ export class NavbarComponent implements OnInit {
     {
       label: 'Marcas',
       icon: '',
-      url: '#brands'
+      url: '#brands',
+      raised: false,
+      color: '',
+      class: ''
     },
     {
       label: 'Nosotros',
       icon: '',
-      url: '/about-us'
+      url: '/about-us',
+      raised: false,
+      color: '',
+      class: 'item-class'
     },
     {
       label: 'Log in',
-      icon: '',
-      url: ''
+      icon: 'fas fa-sign-in-alt',
+      url: '',
+      raised: true,
+      color: '',
+      class: ''
     },
     {
       label: 'Registrarse',
-      icon: 'fas fa-sign-in-alt',
-      url: ''
+      icon: '',
+      url: '',
+      raised: true,
+      color: 'accent',
+      class: ''
     }
   ];
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

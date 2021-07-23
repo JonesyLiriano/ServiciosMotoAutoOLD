@@ -19,6 +19,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     FlexLayoutModule,
     ToastrModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

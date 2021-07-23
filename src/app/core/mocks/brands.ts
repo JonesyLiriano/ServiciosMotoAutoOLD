@@ -4,7 +4,7 @@ import { Brand } from "../models/brand";
 export const BRANDS: Brand[] = [
   {
     'name': 'IRC', 'slogan': '¡Tu pones la velocidad, IRC la seguridad!', 'description': `
-Es la goma original de innumerables modelos de motocicletas de diferentes marcas: Honda, Yamaha, Suzuki; entre otras. Reconocida a nivel mundial  por su excelente calidad y  rendimiento se encuentra posicionada entre las tres primeras marcas globales y como líder en las competencias de moto velocidad y enduro.
+Es la goma original de innumerables modelos de motocicletas de diferentes marcas. Reconocida a nivel mundial  por su excelente calidad y  rendimiento se encuentra posicionada entre las tres primeras marcas globales y como líder en las competencias de moto velocidad y enduro.
 \nIRC esta diseñada con una tecnología de vanguardia  que brinda excelente agarre en pavimento húmedo y curvas, además de un alto rendimiento y duración. Estos beneficios le brindan al usuario la seguridad que busca.
 `, 'category': '', 'logo': '../../../../assets/irc-logo.png', 'products':
       [
@@ -32,17 +32,17 @@ Es la goma original de innumerables modelos de motocicletas de diferentes marcas
   {
     'name': 'KEIKO', 'slogan': '¡Para que permanezcas en control!', 'description': `
 Es la línea superior de piezas para motocicletas que ofrece calidad original, alta durabilidad, belleza e innovación.
-Estas características la convierten en la marca superior del mercado que viene a satisfacer las demandas de un público exigente que busca lo mejor.
+\nEstas características la convierten en la marca superior del mercado que viene a satisfacer las demandas de un público exigente que busca lo mejor.
 `, 'category': 'Motocicleta', 'logo': '../../../../assets/keiko-logo.png', 'products':
       [
-        { 'name': '', 'logo': '' }
+        { 'name': 'Tornillo', 'logo': '../../../../assets/keiko1.jpg'  }
       ]
   },
 
   {
     'name': 'Nitrovia', 'slogan': '¡Powerful Revolution!', 'description': `
 Reconocida por combinar calidad, durabilidad y precios competitivos en su oferta de partes para motocicletas.
-Está posicionada como líder del mercado en los renglones de baterías, aros y accesorios con diseños racing para motocicletas.
+\nEstá posicionada como líder del mercado en diferentes renglones y cuenta con accesorios racing para motocicletas. Nitrovia está diseñada para que te mantengas en control. 
 `, 'category': '', 'logo': '../../../../assets/nitrovia-logo.png', 'products':
       [
         { 'name': 'Mofleta', 'logo': '../../../../assets/nitrovia1.jpg' },

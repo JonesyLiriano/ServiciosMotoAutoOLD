@@ -6,7 +6,8 @@ const routes: Routes = [
   {
     path: '', 
     component: LandingPageLayoutComponent,
-    loadChildren: () => import('../../modules/landing-page/landing-page.module').then(m => m.LandingPageModule)
+    loadChildren: () => import('../../modules/landing-page/landing-page.module').then(m => m.LandingPageModule),
+    data: {depth: 2}
   }
  
 ];

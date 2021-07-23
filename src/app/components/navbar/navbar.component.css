@@ -1,21 +1,20 @@
 .logo {
-    display: inline;
     vertical-align: bottom;
-}
-
-img {
-    height: 50px;
 }
 
 a {
     text-decoration: none;
 }
 
-.main-title {
-    font-size: 25px;
-    line-height: 44px;
-    font-weight: 500;
-    color: white;
+.menu-item {
+    transition: all .5s ease;
+}
+
+.menu-item:hover {
+    box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
+    transform: translate3D(0, -1px, 0) scale(1.03);
+    transition: all .4s ease;
+    background-color: green;
 }
 
 mat-toolbar {
@@ -26,8 +25,69 @@ mat-toolbar {
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
     animation: sk-bounce 2.0s infinite ease-in-out;
     color: white;
+    position: absolute;
+    z-index: 999;
 }
 
 .margin-left-15 {
     margin-left: 30px;
+}
+
+@media screen and (max-width: 599px) {
+    
+    .main-title {
+        font-size: 25px;
+        line-height: 44px;
+        font-weight: 500;
+        color: white;
+    }
+    img {
+        height: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 959px) and (min-width: 600px) {
+    .main-title {
+        font-size: 40px;
+        line-height: 100px;
+        font-weight: 500;
+        color: white;
+    }
+    img {
+        height: 100px;
+    }
+    .item-class{
+        border-right: 1px solid #fff;
+        border-radius: 0px;
+    }
+    mat-toolbar{
+        min-height: 100px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .main-title {
+        font-size: 40px;
+        line-height: 100px;
+        font-weight: 500;
+        color: white;
+    }
+    img {
+        height: 100px;
+    }
+    .menu-item {
+        font-size: 18px;
+        line-height: 44px;
+        font-weight: 500;
+        margin: 5px
+    }
+    .item-class{
+        border-right: 1px solid #fff;
+        border-radius: 0px;
+    }
+
+    mat-toolbar{
+        min-height: 100px;
+    }
 }

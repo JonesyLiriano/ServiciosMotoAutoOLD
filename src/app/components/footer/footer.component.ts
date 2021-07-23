@@ -19,7 +19,40 @@ export class FooterComponent implements OnInit {
   get email() {
     return this.subscriberForm.get('email');
   }
-
+  menuItems = [
+    {
+      label: 'Marcas',
+      icon: '',
+      url: '#brands',
+      raised: false,
+      color: '',
+      class: ''
+    },
+    {
+      label: 'Nosotros',
+      icon: '',
+      url: '/about-us',
+      raised: false,
+      color: '',
+      class: 'item-class'
+    },
+    {
+      label: 'Log in',
+      icon: 'fas fa-sign-in-alt',
+      url: '',
+      raised: true,
+      color: '',
+      class: ''
+    },
+    {
+      label: 'Registrarse',
+      icon: '',
+      url: '',
+      raised: true,
+      color: 'accent',
+      class: ''
+    }
+  ];
   constructor(private fb: FormBuilder, private toastr: ToastrService) { }
 
   ngOnInit(): void {

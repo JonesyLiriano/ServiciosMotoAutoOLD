@@ -121,3 +121,6 @@
     .ft-legal-list li:nth-last-child(2) {
         flex: 1;
     }
+    .menu-item {
+        display: list-item !important;
+    }

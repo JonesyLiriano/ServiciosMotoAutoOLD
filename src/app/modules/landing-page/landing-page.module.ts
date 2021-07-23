@@ -11,6 +11,7 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps'
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AboutUsComponent,
@@ -25,7 +26,8 @@ import { GoogleMapsModule } from '@angular/google-maps'
     DragScrollModule,
     FormsModule,
     ReactiveFormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    NgbModule
   ]
 })
 export class LandingPageModule { }

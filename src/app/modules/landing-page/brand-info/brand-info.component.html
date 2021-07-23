@@ -1,34 +1,39 @@
 <div class="container">
-    <div fxLayout="column" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="space-evenly center" class="section1">
-        <div fxFlex="100%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="space-between center" class="section1" data-aos="fade-down" data-aos-duration="1000">
+        <div fxFlex="50%" fxFlex.lt-md="50%" fxFlex.lt-sm="100%">
+            <div fxLayout="column">
+                <ngb-carousel #myCarousel="ngbCarousel" [interval]="2500" [pauseOnHover]="false" [showNavigationIndicators]="false">
+                    <ng-template *ngFor="let product of brand?.products; let i = index" ngbSlide [id]="'ngb-slide-' + i">
+                        <div class="picsum-img-wrapper">
+                            <img class="img-carousel" src="{{product?.logo}}">
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
+                <div class="card-container">
+                    <drag-scroll>
+                        <div *ngFor="let product of brand?.products; let i = index" drag-scroll-item class="card-content" data-aos="fade-up" data-aos-duration="1000">
+                            <mat-card class="mat-elevation-z4 brand-card" (click)="imgChange(i)">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <img class="card-logo" src="{{product?.logo}}" />
+                                    </mat-card-title>
+                                </mat-card-header>
+                            </mat-card>
+                        </div>
+                    </drag-scroll>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="40%" fxFlex.lt-md="40%" fxFlex.lt-sm="100%" data-aos="fade-left" data-aos-duration="1000">
             <img class="logo" src="{{brand?.logo}}" />
             <h1 class="main-title">{{brand?.name}}</h1>
             <h1 class="main-subtitle">{{brand?.slogan}}</h1>
-        </div>
-        <div fxFlex="100%" class="description-container">
             <h1 class="main-subtitle ">{{brand?.description}}</h1>
         </div>
         <div class="scroll-downs">
             <div class="mousey">
                 <div class="scroller"></div>
             </div>
-        </div>
-    </div>
-    <div fxLayout="column" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section2">
-        <h1 class="main-title">Productos</h1>
-        <div class="card-container">
-            <drag-scroll>
-                <div *ngFor="let product of brand?.products" drag-scroll-item class="card-content">
-                    <mat-card class="mat-elevation-z4 brand-card">
-                        <mat-card-header>
-                            <mat-card-title>
-                                <img class="card-logo" src="{{product?.logo}}" />
-                            </mat-card-title>
-                            <mat-card-subtitle>{{product?.name}}</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-            </drag-scroll>
         </div>
     </div>
 </div>

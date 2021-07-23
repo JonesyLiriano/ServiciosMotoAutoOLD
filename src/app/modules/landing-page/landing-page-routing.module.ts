@@ -5,9 +5,9 @@ import { BrandInfoComponent } from './brand-info/brand-info.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about-us', component: AboutUsComponent },
-  { path: 'brand/:info', component: BrandInfoComponent }
+  { path: '', component: HomeComponent, data: {depth: 2} },
+  { path: 'about-us', component: AboutUsComponent, data: {depth: 2} },
+  { path: 'brand/:info', component: BrandInfoComponent, data: {depth: 3} }
 ];
 
 @NgModule({

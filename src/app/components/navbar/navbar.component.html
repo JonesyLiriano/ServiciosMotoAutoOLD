@@ -1,10 +1,13 @@
 <mat-toolbar fxLayout="row" color="primary">
-    <a fxFlex href="/">
-
-        <h2 class="main-title"> <img class="logo" src="/ServiciosMotoAuto/assets/logo2.jfif"> Servicios MotoAuto</h2>
+    <a href="/">
+        <h2 class="main-title"> <img class="logo" src="../../../assets/logo2.jfif"> Servicios MotoAuto</h2>
     </a>
+    <div class="fill-remaining-space"></div>
     <ng-container *ngFor="let item of menuItems">
-        <a mat-button href="{{item.url}}" fxHide.xs>
+        <a *ngIf="!item.raised" color ="{{item.color}}" mat-button href="{{item.url}}" fxHide.xs class="menu-item {{item.class}}">
+            <i class="{{item.icon}}"></i> {{item.label}}
+        </a>
+        <a *ngIf="item.raised" color ="{{item.color}}" mat-raised-button href="{{item.url}}" fxHide.xs class="menu-item {{item.class}}">
             <i class="{{item.icon}}"></i> {{item.label}}
         </a>
     </ng-container>

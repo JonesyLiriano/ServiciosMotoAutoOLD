@@ -1,20 +1,29 @@
 <div class="content">
-    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section1">
-        <div fxFlex="40%" fxFlex.lt-md="30%" fxFlex.lt-sm="40%">
-            <h1 class="main-title">¡La que mas le beneficia!</h1>
-            <a href="#contactUs" class="button-title" mat-raised-button color="accent">Contáctanos</a>
-            <a class="button-subtitle" mat-button><i class="fas fa-shopping-cart"></i> Ver tienda</a>
-        </div>
-        <img src="../../../../assets/bicixmoto.png" class="image-tittle" fxFlex="50%" fxFlex.lt-md="50%" fxFlex.lt-sm="45%" />
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center strech" data-aos="fade-down" data-aos-duration="1000" class="section1">
+        <div fxFlex="100%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
+            <ngb-carousel #ngcarousel [interval]="2500" [pauseOnHover]="false">                
+                <ng-template *ngFor="let image of images" ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img class="img-carousel" [src]="image">
+                  </div>
+                  <div class="carousel-caption">
+                    <h1 class="main-title">¡La que mas le beneficia!</h1>
+                    <a href="#contactUs" class="button-title" mat-raised-button color="accent">Contáctanos</a>
+                    <a class="button-subtitle" mat-button><i class="fas fa-shopping-cart"></i> Ver tienda</a>
+                  </div>
+                </ng-template>
+                
+              </ngb-carousel>
+        </div>       
         <div class="scroll-downs">
             <div class="mousey">
                 <div class="scroller"></div>
             </div>
         </div>
     </div>
-    <div fxLayout="row" class="section2" fxLayoutAlign="space-evenly center" id="brands">
+    <div fxLayout="row" class="section2" fxLayoutAlign="space-evenly center"  id="brands">
         <div fxLayout="column" fxLayoutAlign="space-evenly center">
-            <div fxLayout="row" class="brands-info">
+            <div fxLayout="row" class="brands-info" data-aos="fade-left" data-aos-duration="1000">
                 <div fxLayout="column" fxLayoutAlign="space-evenly center">
                     <div class="white-color section2-text">
                         <h1 class="main-title">Explora nuestras marcas</h1>
@@ -28,7 +37,7 @@
             <mat-spinner *ngIf="showBrandSpinner"></mat-spinner>
             <div class="card-container">
                 <drag-scroll>
-                    <div *ngFor="let brand of brandsList" drag-scroll-item class="card-content">
+                    <div *ngFor="let brand of brandsList" drag-scroll-item class="card-content" data-aos="fade-right" data-aos-duration="1000">
                         <mat-card class="mat-elevation-z4 brand-card" *ngIf="categoryToggleButton.value == brand.category || brand.category == ''">
                             <mat-card-header>
                                 <mat-card-title>
@@ -44,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section3" id="contactUs">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" data-aos="fade-down" data-aos-duration="1000" class="section3" id="contactUs">
         <div>
             <h1 class="main-title section3-title">Contáctanos</h1>
             <h1 class="main-subtitle">¿No eres cliente aún? Favor de llenar este formulario y nos pondremos en contacto con usted</h1>
@@ -113,7 +122,7 @@
             </mat-card>
         </div>
     </div>
-    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="section4">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center center" data-aos="fade-up" data-aos-duration="1000" class="section4">
         <div class="full-width">
             <h1 class="main-title section3-title">Ubicación</h1>
             <google-map height="500px" width="100%" [center]="centerMap" [zoom]="18" [options]="optionsMap">
