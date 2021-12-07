@@ -1,7 +1,7 @@
 <div class="content">
     <div fxLayout="row" fxLayout.lt-md="column" fxLayout.lt-sm="column" fxLayoutAlign="center strech" data-aos="fade-down" data-aos-duration="1000" class="section1">
         <div fxFlex="100%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
-            <ngb-carousel #ngcarousel [interval]="2500" [pauseOnHover]="false">                
+            <ngb-carousel #ngcarousel [interval]="3000" [pauseOnHover]="false">                
                 <ng-template *ngFor="let image of images" ngbSlide>
                   <div class="picsum-img-wrapper">
                     <img class="img-carousel" [src]="image">
@@ -38,7 +38,7 @@
             <div class="card-container">
                 <drag-scroll>
                     <div *ngFor="let brand of brandsList" drag-scroll-item class="card-content" data-aos="fade-right" data-aos-duration="1000">
-                        <mat-card class="mat-elevation-z4 brand-card" *ngIf="categoryToggleButton.value == brand.category || brand.category == ''">
+                        <mat-card class="mat-elevation-z7 brand-card" *ngIf="categoryToggleButton.value == brand.category || brand.category == ''">
                             <mat-card-header>
                                 <mat-card-title>
                                     <img class="card-logo" src="{{brand.logo}}" />

@@ -75,6 +75,7 @@
 
 .card-logo {
     width: 150px;
+    height: 80px;
 }
 
 .mat-button-toggle-group {
@@ -90,6 +91,7 @@ mat-card:hover {
 .brand-card {
     width: 200px;
     margin: 15px;
+    border-radius: 15px;
 }
 
 mat-card {

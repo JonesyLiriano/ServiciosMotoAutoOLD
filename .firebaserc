@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "okonomi-bfa7f"
-  }
+    "default": "okonomi-bfa7f",
+    "test": "test-4c741"
+  },
+  "targets": {}
 }

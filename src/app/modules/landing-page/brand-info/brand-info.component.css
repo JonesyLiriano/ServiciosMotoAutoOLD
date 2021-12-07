@@ -45,7 +45,7 @@
 }
 
 .logo {
-    width: 500px;
+    width: 100%;
 }
 
 .section1 {
@@ -59,7 +59,9 @@ h1 {
 }
 
 .img-carousel {
-    object-fit: cover;
+    object-fit: fill;
+    border-radius: 15px;
+    height: 40vh;
 }
 
 .card-content {
@@ -67,19 +69,31 @@ h1 {
 }
 
 .brand-card {
-    width: 200px;
-    margin: 15px;
+    width: 180px;
+    margin: 10px;
     cursor: pointer;
 }
-
+.brand-card img {
+    border-radius: 15px;
+}
 .card-logo {
     width: 150px;
+    height: 130px;
 }
 
 drag-scroll {
     overflow-y: hidden;
 }
-
+.carousel-item {
+width: 100% !important;
+}
+.description-img-h { 
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+ngb-carousel >>> a.carousel-control-next.ng-star-inserted,  ngb-carousel >>> a.carousel-control-prev.ng-star-inserted{
+    margin-bottom: 53px !important;
+}
 @media screen and (max-width: 599px) {
     .main-title {
         font-size: 30px;
@@ -113,6 +127,7 @@ drag-scroll {
     }
     ngb-carousel {
        width: 100vw;
+       margin-top: 10px;
     }
     .section1 {
         padding-top: 56px;
@@ -120,7 +135,7 @@ drag-scroll {
     }
     drag-scroll{
         padding-left: 15px;
-    padding-right: 35px !important;
+        padding-right: 35px !important;
     }
 }
 
@@ -145,7 +160,7 @@ drag-scroll {
         padding: 0px 0px 150px 0px;
     }
     .img-carousel {
-        width: 90%;
+        width: 90%;       
     }
     .section1 {
         height: 100vh;
