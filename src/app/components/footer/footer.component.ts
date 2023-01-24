@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
+import { UntypedFormBuilder, FormGroupDirective, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { phoneNumberValidator } from 'src/app/core/validators/phone-validator';
 
@@ -53,7 +53,7 @@ export class FooterComponent implements OnInit {
       class: ''
     }
   ];
-  constructor(private fb: FormBuilder, private toastr: ToastrService) { }
+  constructor(private fb: UntypedFormBuilder, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }

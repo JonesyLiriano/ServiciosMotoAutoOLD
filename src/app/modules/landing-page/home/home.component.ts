@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder, FormGroupDirective } from '@angular/forms';
+import { Validators, UntypedFormBuilder, FormGroupDirective } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { BRANDS } from 'src/app/core/mocks/brands';
@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
      './../../../assets/carrousel/moto/5.jpg',
     './../../../assets/carrousel/bici/5.jpg',
   ];
-  constructor(private fb: FormBuilder, private toastr: ToastrService,
+  constructor(private fb: UntypedFormBuilder, private toastr: ToastrService,
     private router: Router) {      
     }
 
