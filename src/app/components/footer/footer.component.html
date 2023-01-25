@@ -31,11 +31,14 @@
         <div class="ft-main-item">
             <h2 class="ft-title">Mantente actualizado</h2>
             <p>Suscríbase a nuestro boletín para recibir nuestras últimas ofertas.</p>
+            <div class="spinnercenter">
+                <mat-spinner *ngIf="showContactSpinner"></mat-spinner>
+            </div>
             <form [formGroup]="subscriberForm" #formDirective="ngForm" (ngSubmit)="onClickSubmit(formDirective)">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Ingresar Email</mat-label>
                     <input formControlName="email" matInput type="email" placeholder="Ingresar Email">
-                    <button mat-button *ngIf="email?.value" matSuffix mat-icon-button aria-label="Clear" (click)="email?.setValue('')">
+                    <button mat-button *ngIf="email?.value" matSuffix mat-icon-button aria-label="Clear" (click)="clearEmail()">
                     <mat-icon>close</mat-icon>
                     </button>
                     <mat-error *ngIf="(email?.dirty || email?.touched) && email?.invalid && !!email?.errors?.required">
@@ -49,7 +52,7 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Ingresar Whatsapp</mat-label>
                     <input formControlName="phone" matInput type="tel" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Ingresar Whatsapp">
-                    <button mat-button *ngIf="phone?.value" matSuffix mat-icon-button aria-label="Clear" (click)="phone?.setValue('')">
+                    <button mat-button *ngIf="phone?.value" matSuffix mat-icon-button aria-label="Clear" (click)="clearPhone()">
           <mat-icon>close</mat-icon>
         </button>
                     <mat-error *ngIf="(phone?.dirty || phone?.touched) && phone?.invalid && !!phone?.errors?.required">
@@ -63,7 +66,7 @@
                     </mat-error>
                 </mat-form-field>
                 <div>
-                    <button mat-raised-button color="accent" class="full-width" type="submit" [disabled]="!subscriberForm.valid">Subscribirse</button>
+                    <button mat-raised-button color="accent" class="full-width" type="submit" [disabled]="(!subscriberForm.valid || (phone?.value == '' && email?.value == '')) || showContactSpinner">Subscribirse</button>
                 </div>
             </form>
         </div>

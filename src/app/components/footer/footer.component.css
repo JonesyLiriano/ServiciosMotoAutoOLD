@@ -124,3 +124,8 @@
     .menu-item {
         display: list-item !important;
     }
+    .spinnercenter{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }

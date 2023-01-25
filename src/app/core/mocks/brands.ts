@@ -22,13 +22,13 @@ Es la línea superior de piezas para motocicletas que ofrece calidad original, a
 \nEstas características la convierten en la marca superior del mercado que viene a satisfacer las demandas de un público exigente que busca lo mejor.
 `, 'category': 'Motocicleta', 'logo': '../../../../assets/keiko-logo.png', 'products':
       [
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko1.jpg', 'use': ''   },
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko2.jpg', 'use': ''   },
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko3.jpg', 'use': ''   },
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko4.jpg', 'use': ''   },
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko5.jpg', 'use': ''   },
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko6.jpg', 'use': ''   },
-        { 'name': '', 'logo': '../../../../assets/keiko/keiko7.jpg', 'use': ''   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko1.jpg', 'use': ' '   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko2.jpg', 'use': ' '   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko3.jpg', 'use': ' '   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko4.jpg', 'use': ' '   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko5.jpg', 'use': ' '   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko6.jpg', 'use': ' '   },
+        { 'name': '', 'logo': '../../../../assets/keiko/keiko7.jpg', 'use': ' '   },
         { 'name': 'CATALINA TRASERA', 'logo': '../../../../assets/keiko/10762.jpg', 'use': 'RS0 RX5 DT5'   },
         { 'name': 'FLAPPERS', 'logo': '../../../../assets/keiko/19700.jpg', 'use': 'AX100'   },
         { 'name': 'CABLE ACELERADOR', 'logo': '../../../../assets/keiko/47879.jpg', 'use': 'PC H100'   },
@@ -58,13 +58,13 @@ Reconocida por combinar calidad, durabilidad y precios competitivos en su oferta
 \nEstá posicionada como líder del mercado en diferentes renglones y cuenta con accesorios racing para motocicletas. Nitrovia está diseñada para que te mantengas en control. 
 `, 'category': '', 'logo': '../../../../assets/nitrovia-logo.png', 'products':
       [
-        { 'name': 'ESTRIBOS', 'logo': '../../../../assets/nitrovia/nitrovia1.jpg', 'use': ''  },
-        { 'name': 'PUÑOS', 'logo': '../../../../assets/nitrovia/nitrovia2.jpg', 'use': ''  },
-        { 'name': 'PUÑOS', 'logo': '../../../../assets/nitrovia/nitrovia3.jpg', 'use': ''  },
-        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia4.jpg', 'use': ''  },
-        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia5.jpg', 'use': ''  },
-        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia6.jpg', 'use': ''  },
-        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia7.jpg', 'use': ''  },
+        { 'name': 'ESTRIBOS', 'logo': '../../../../assets/nitrovia/nitrovia1.jpg', 'use': ' '  },
+        { 'name': 'PUÑOS', 'logo': '../../../../assets/nitrovia/nitrovia2.jpg', 'use': ' '  },
+        { 'name': 'PUÑOS', 'logo': '../../../../assets/nitrovia/nitrovia3.jpg', 'use': ' '  },
+        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia4.jpg', 'use': ' '  },
+        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia5.jpg', 'use': ' '  },
+        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia6.jpg', 'use': ' '  },
+        { 'name': 'CASCO', 'logo': '../../../../assets/nitrovia/nitrovia7.jpg', 'use': ' '  },
         { 'name': 'BASE MANECILLA', 'logo': '../../../../assets/nitrovia/13021.jpg', 'use': 'CG125 X1000 CG200 CG150'  },
         { 'name': 'CARBURADOR', 'logo': '../../../../assets/nitrovia/13269.jpg', 'use': 'PC90 PC70 PC50 C70 C90 H110'  },
         { 'name': 'ASIENTO', 'logo': '../../../../assets/nitrovia/34136.jpg', 'use': 'CG125 CG150 CG200'  },

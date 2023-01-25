@@ -4,7 +4,7 @@
         <div fxFlex="50%" fxFlex.lt-md="50%" fxFlex.lt-sm="100%">
             <div fxLayout="column">
                 <ngb-carousel #myCarousel="ngbCarousel" [interval]="2500" [pauseOnHover]="false"
-                    [showNavigationIndicators]="false">
+                    [showNavigationArrows]="false" [showNavigationIndicators]="false">
                     <ng-template *ngFor="let product of brand?.products; let i = index" ngbSlide
                         [id]="'ngb-slide-' + i">
                         <div class="picsum-img-wrapper">

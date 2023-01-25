@@ -308,4 +308,9 @@ drag-scroll {
     .mat-button-toggle-group {
         font-size: 20px;
     }
+    .spinnercenter{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 }

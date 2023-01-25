@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
@@ -7,7 +7,15 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'ServiciosMotoAuto';
+
+  constructor(private cdref: ChangeDetectorRef)
+  {
+    
+  }
   ngOnInit() {
     AOS.init();
+  }
+  ngAfterContentChecked() {
+    this.cdref.detectChanges();
   }
 }
